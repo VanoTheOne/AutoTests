@@ -9,7 +9,7 @@ const config = {
   // automock: false,
 
   // Stop running tests after `n` failures
-  // bail: 0,
+  bail: 0,
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\van0t\\AppData\\Local\\Temp\\jest",
@@ -33,6 +33,20 @@ const config = {
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
+
+  reporters: ['default',
+  'jest-junit',
+  [
+    'jest-html-reporters',
+      {
+        pageTitle: 'Contract Monitoring Test Report',
+        publicPath: './reports',
+        filename: 'test-report.html',
+        enableMergeData: true,
+        dataMergeLevel: 3,
+      },
+    ],
+  ],
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
