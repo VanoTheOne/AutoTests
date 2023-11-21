@@ -48,7 +48,7 @@ const config = {
     ],
   ],
 
-  setupFilesAfterEnv: ['./setupJest.js'],
+  setupFilesAfterEnv: ['./helpers/setupJest.js'],
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
   //   "json",
